@@ -24,15 +24,15 @@
 </head>
 <body>
     <div class="container ">
-        <h1 class="text-center mt-5 ">Registration Form</h1>
-    <form method="POST" action="/register" class="border border-warning pl-5">
+        <h1 class="text-center mt-5 ">Update Your Form</h1>
+    <form  method="POST" action="/update/<%= students._id %>" class="border border-warning pl-5">
         <label>Name</label><br>
-        <input type="text" name="name" class="mb-3"/><br>
+        <input type="text" name="name" value="<%= students.name %>" class="mb-3"/><br>
         <label>Email</label><br>
-        <input type="email" name="mail" class="mb-3" /><br>
+        <input type="email" name="mail" value="<%= students.mail %>" class="mb-3" /><br>
         <label>Age</label><br>
-        <input type="text" name="age" class="mb-3" /><br><br>
-        <button  class="btn btn-secondary btn-lg btn-block">Register</button>
+        <input type="text" name="age" value="<%= students.age %>" class="mb-3" /><br><br>
+        <button  class="btn btn-secondary btn-lg btn-block">Updated</button>
     </form>
 </div>
 </body>
