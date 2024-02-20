@@ -34,7 +34,8 @@ app.get("/register", (req, res) => {
 	res.render("register")
 });
 
-app.get("/delete/:id", async (req, res) => { // const {id} = req.params;
+app.get("/delete/:id", async (req, res) => { 
+	// const {id} = req.params;
 	deleteStudent = await Student.findByIdAndDelete(req.params.id);
 	res.redirect("/")
 });
@@ -55,4 +56,4 @@ app.post("/update/:id", async (req, res) => {
      {name,mail,age	},
      {new: true});
 	res.redirect("/")
-})
+});
